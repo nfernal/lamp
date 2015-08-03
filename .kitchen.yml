@@ -1,0 +1,24 @@
+---
+driver:
+  name: vagrant
+  customize:
+    memory: 2048
+
+drive_config:
+  network:
+    - ["forwarded_port", {guest: 8080, host: 9090}]
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: centOS
+    driver_config: 
+      vm_hostname: false
+      box: centOS.box
+
+suites:
+  - name: default
+    run_list:
+      - recipe[lamp::default]
+    attributes:
