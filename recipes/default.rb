@@ -14,3 +14,5 @@ end
 	end
 end
 
+include_recipe "java"
+include_recipe "maven"
