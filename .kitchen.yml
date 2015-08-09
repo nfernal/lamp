@@ -4,18 +4,17 @@ driver:
   customize:
     memory: 2048
 
-drive_config:
-  network:
-    - ["forwarded_port", {guest: 8080, host: 9090}]
+driver_config:
+  require_chef_omnibus: true
 
 provisioner:
   name: chef_zero
 
 platforms:
-  - name: centOS
-    driver_config: 
+  - name: chef/centos-6.6
+    driver_config:
       vm_hostname: false
-      box: centOS.box
+
 
 suites:
   - name: default
