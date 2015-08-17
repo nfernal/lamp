@@ -4,6 +4,7 @@ driver:
   customize:
     memory: 2048
 
+
 driver_config:
   require_chef_omnibus: true
 
