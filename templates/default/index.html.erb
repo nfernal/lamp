@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<ul>
+			<li>Platform: <%= node['platform'] %></li>
+			<li>Platform Version: <%= node['platform_version'] %></li>
+			<li>Virtualization: <%= node['virtualization']['system'] %></li>
+			<li>CPU Model: <%= node['cpu']['model_name']%></li>
+			<li>cpu mhz: <%= node['cpu']['mhz']%></li>
+			<li>cpu cache: <%= node['cpu']['cache_size']%></li>
+			<li>cpu cores: <%= node['cpu']['cores']%></li>
+			<li>RAM total: <%= node['memory']['total']%></li>
+			<li>RAM free: <%= node['memory']['free']%></li>
+			<li>Disk Size kb: <%= node['filesystem']['/dev/mapper/VolGroup-lv_root']['kb_size'] %></li>
+			<li>Disk Avail. kb: kb: <%= node['filesystem']['/dev/mapper/VolGroup-lv_root']['kb_available'] %></li>
+			<li>Disk % Used kb: <%= node['filesystem']['/dev/mapper/VolGroup-lv_root']['percent_used'] %></li>
+			<li>IP Address: <%= node['ipaddress'] %></li>
+			<li>MAC Address: <%= node['macaddress'] %></li>
+			<li>FQDN: <%= node['fqdn'] %></li>
+			<li>Hostname: <%= node['hostname'] %></li>
+			<li>Domain: <%= node['domain'] %></li>
+			<li>Recipes: <%= node['recipes'] %></li>
+			<li>Roles: <%= node['roles'] %></li>
+			<li>Ohai Time: <%= node['ohai_time'] %></li>
+		</ul>
+	</body>
+</html>

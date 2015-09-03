@@ -3,11 +3,11 @@
 # description: Tomcat Start Stop Restart  
 # processname: tomcat  
 # chkconfig: 234 20 80  
-JAVA_HOME=/usr/lib/jvm/java  
+JAVA_HOME=<%=node['lamp']['java']['JAVA_HOME']%>  
 export JAVA_HOME  
-PATH=$JAVA_HOME/bin:$PATH  
+PATH=<%=node['lamp']['java']['PATH']%>   
 export PATH  
-CATALINA_HOME=/usr/bin/tomcat  
+CATALINA_HOME=<%=node['lamp']['java']['CATALINA_HOME']%>  
   
 case $1 in  
 start)  
@@ -21,4 +21,4 @@ sh $CATALINA_HOME/bin/shutdown.sh
 sh $CATALINA_HOME/bin/startup.sh  
 ;;   
 esac      
-exit 0 
+exit 0

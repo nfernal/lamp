@@ -4,5 +4,6 @@ default['java']['oracle']['accept_oracle_download_terms'] = true
 default['apache']['mpm'] = 'rhel'
 default['apache']['platform'] = 'centos'
 default['jenkins']['master']['port'] = 8081
-
-
+default['lamp']['java']['JAVA_HOME'] = '/usr/lib/jvm/java'
+default['lamp']['java']['PATH'] = '$JAVA_HOME/bin:$PATH'
+default['lamp']['java']['CATALINA_HOME'] = '/usr/bin/tomcat'
