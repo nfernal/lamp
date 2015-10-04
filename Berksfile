@@ -12,6 +12,5 @@ cookbook 'jenkins', '~> 2.3.1'
 cookbook 'apache2', '~> 3.1.0'
 cookbook 'chef-vault', '~> 1.3.0'
 cookbook 'lvm', '~> 1.3.7'
-
 ### LWRP's
 cookbook 'mysql', '~> 6.1.0'
